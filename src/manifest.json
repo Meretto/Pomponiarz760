@@ -15,6 +15,9 @@
 		"activeTab",
 		"tabs"
 	],
+	"web_accessible_resources": [
+		"data/messages.json"
+	],
 	"content_scripts": [
 		{
 			"matches": [
