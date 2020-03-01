@@ -1,8 +1,9 @@
-window.pasty = new Array(0)
+window.pasty = new Array(0);
 
-chrome.runtime.onInstalled.addListener(function() { 
-    window.pasty.unshift("Bla bla")
-    window.pasty.unshift("XD")
-    window.pasty.unshift("WTF")
-    window.pasty.unshift("KEKW")
+chrome.runtime.onInstalled.addListener(function() {
+  const url = chrome.runtime.getURL("data/messages.json");
+
+  fetch(url)
+    .then(response => response.json())
+    .then(json => window.pasty = json.messages);
 });
