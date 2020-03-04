@@ -1,6 +1,6 @@
 window.pasty = new Array(0);
 
-chrome.runtime.onInstalled.addListener(function() {
+chrome.runtime.onStartup.addListener(function() {
   const url = chrome.runtime.getURL("data/messages.json");
 
   fetch(url)
